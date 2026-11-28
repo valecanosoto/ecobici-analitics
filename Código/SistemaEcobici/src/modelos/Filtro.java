@@ -1,3 +1,5 @@
+package modelos;
+
 public abstract class Filtro {
 
     public String columna;

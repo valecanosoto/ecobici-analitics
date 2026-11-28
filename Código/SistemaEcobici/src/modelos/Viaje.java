@@ -1,3 +1,5 @@
+package modelos;
+
 public class Viaje {
     private String genero;
     private int edad;
