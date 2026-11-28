@@ -1,3 +1,8 @@
+package filtros;
+
+import modelos.Filtro;
+import modelos.Viaje;
+
 public class FiltroFecha extends Filtro {
 
     public String fechaDesde;
