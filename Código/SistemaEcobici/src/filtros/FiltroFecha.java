@@ -11,22 +11,26 @@ public class FiltroFecha extends Filtro {
             throw new IllegalArgumentException("Columna no puede ser diferente a " + columnaRetiro + " o " + columnaDevolucion);
         }
         super(columna);
+        if (!esFechaValida(fechaDesde) || !esFechaValida(fechaHasta)) {
+            throw new IllegalArgumentException("Fechas no válidas");
+        } else if (fechaDesde.compareTo(fechaHasta) > 0) {
+            throw new IllegalArgumentException("Fecha desde no puede ser mayor a fecha hasta");
+        }
         this.fechaDesde = fechaDesde;
         this.fechaHasta = fechaHasta;
     }
 
     @Override 
     public boolean cumpleFiltro(Viaje viaje) {
-         if (viaje.) {
-            
-            return false;
+         if (viaje.getFechaRetiro().compareTo(fechaDesde) >= 0 && viaje.getFechaRetiro().compareTo(fechaHasta) <= 0) {
+            return true;
         } else {
             return false;
         }
     }
 
     public boolean esFechaValida(String fecha) {
-        // Implement date validation logic here
+        // Falta implementar la validación de la fecha, por ahora siempre retorna true
         return true;
     }
 }

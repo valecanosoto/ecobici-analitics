@@ -9,7 +9,8 @@ public class Viaje {
     private String fechaArribo;
     private String horaArribo;
 
-    public Viaje(String genero, int edad, int bici, int estacionRetiro, String fechaRetiro, String horaRetiro, int estacionArribo, String fechaArribo, String horaArribo) {
+    public Viaje(String genero, int edad, int bici, int estacionRetiro, String fechaRetiro, String horaRetiro,
+            int estacionArribo, String fechaArribo, String horaArribo) {
         this.genero = genero;
         this.edad = edad;
         this.bici = bici;
@@ -93,5 +94,4 @@ public class Viaje {
         this.horaArribo = horaArribo;
     }
 
-    
 }
